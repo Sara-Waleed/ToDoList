@@ -81,10 +81,10 @@ class HomePage extends StatelessWidget {
         body: Column(
           children: [
             SizedBox(height: 10,),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: SearchBar(),
-            ),
+            // Padding(
+            //   padding: const EdgeInsets.all(8.0),
+            //   //child: SearchBar(),
+            // ),
 
             Image.asset("assets/homeImage.jpg"),
 

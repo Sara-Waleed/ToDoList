@@ -25,29 +25,32 @@ class AddTask extends StatelessWidget {
         //centerTitle: true,
 
       ),
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        //  mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: TodoInputFields(),
-          ),
-          SizedBox(height: 20,),
-          Container(
-            height: 50,
-            width: 300,
-            child: Center(child: Text("Create",style: TextStyle(
-              color: Colors.white,
-              //   fontWeight: FontWeight.bold,
-              fontSize: 25,
-            ),)),
-            decoration: BoxDecoration(
-              color: Colors.blue,
-              borderRadius: BorderRadius.circular(20),
+      body: SingleChildScrollView(
+        scrollDirection: Axis.vertical,
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          //  mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: TodoInputFields(),
             ),
-          ),
-        ],
+            SizedBox(height: 20,),
+            Container(
+              height: 50,
+              width: 300,
+              child: Center(child: Text("Create",style: TextStyle(
+                color: Colors.white,
+                //   fontWeight: FontWeight.bold,
+                fontSize: 25,
+              ),)),
+              decoration: BoxDecoration(
+                color: Colors.blue,
+                borderRadius: BorderRadius.circular(20),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
