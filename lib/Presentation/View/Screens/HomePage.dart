@@ -1,7 +1,10 @@
 
 
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
+import '../../../Data/task_cubit.dart';
+import '../../../Domain/models/Task_Model.dart';
 import 'AddTaskPage.dart';
 import 'HistoryPage.dart';
 import 'SettingPage.dart';
@@ -116,3 +119,37 @@ class ThemeProvider extends ChangeNotifier {
     notifyListeners();
   }
 }
+
+// class HomePage extends StatelessWidget {
+//   const HomePage({Key? key}) : super(key: key);
+//
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       appBar: AppBar(
+//         title: Text("Task Manager"),
+//       ),
+//       body: BlocBuilder<NoteCubit, List<Task>>(
+//         builder: (context, notes) {
+//           return ListView.builder(
+//             itemCount: notes.length,
+//             itemBuilder: (context, index) {
+//               final note = notes[index];
+//               return ListTile(
+//                 title: Text(note.content),
+//                 subtitle: Text(note.date.toString()),
+//                 trailing: Text(note.priority),
+//               );
+//             },
+//           );
+//         },
+//       ),
+//       floatingActionButton: FloatingActionButton(
+//         onPressed: () {
+//           Navigator.push(context, MaterialPageRoute(builder: (context) => AddTask()));
+//         },
+//         child: Icon(Icons.add),
+//       ),
+//     );
+//   }
+// }
