@@ -8,6 +8,7 @@ class TodoInputFields extends StatefulWidget {
 }
 
 class _TodoInputFieldsState extends State<TodoInputFields> {
+  final TextEditingController _contentController = TextEditingController();
   final TextEditingController _dateController = TextEditingController();
   final TextEditingController _priorityController = TextEditingController();
 
@@ -19,6 +20,7 @@ class _TodoInputFieldsState extends State<TodoInputFields> {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           TextField(
+            controller: _contentController,
             decoration: InputDecoration(
               labelText: 'To-Do Content',
               border: OutlineInputBorder(
@@ -99,6 +101,7 @@ class _TodoInputFieldsState extends State<TodoInputFields> {
 
   @override
   void dispose() {
+    _contentController.dispose();
     _dateController.dispose();
     _priorityController.dispose();
     super.dispose();
